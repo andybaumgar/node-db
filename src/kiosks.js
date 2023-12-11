@@ -64,7 +64,9 @@ function rowToKiosk(row) {
   const coordinates = [parseFloat(longitude), parseFloat(latitude)];
   const status = STATUS_TYPES[link_installation_status];
   return {
-    id: cb_link_id,
+    street_address: row.street_address,
+    type: row.planned_kiosk_type,
+    id: row.link_site_id,
     coordinates,
     status
   };
